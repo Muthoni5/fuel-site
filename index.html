@@ -1,4 +1,38 @@
 <!DOCTYPE html>
-<html>
-    <h1> FUEL WEBSITE LIVE </h1>
-</html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Admin • Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Top Navbar -->
+<nav class="topbar">
+    <div class="d-flex align-items-center">
+        <button class="btn" id="sidebarToggle" type="button" aria-label="Toggle sidebar">
+            <i class="bi bi-list fs-4"></i>
+        </button>
+        <a class="navbar-brand brand ms-2" href="dashboard.php">Admin Console</a>
+    </div>
+
+    <div class="ms-auto dropdown">
+        <a href="#" class="d-flex align-items-center text-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://ui-avatars.com/api/?name=Admin&background=222831&color=fff"
+                 width="32" height="32" class="rounded-circle me-2" alt="User">
+            <strong>Admin</strong>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+            <li><a class="dropdown-item" href="admin_profile.php">
+                <i class="bi bi-person me-2"></i>Profile</a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="logout.php">
+                <i class="bi bi-box-arrow-right me-2"></i>Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Global overlay (for mobile sidebar) -->
+<div id="overlay"></div>
+
+<!-- Sidebar toggle logic -->
