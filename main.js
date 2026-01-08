@@ -35,3 +35,44 @@ new Chart(ctx, {
     }
   }
 });
+
+function calculateVehicleStats() {
+  const today = new Date();
+  const rows = document.querySelectorAll(".vehicle-table tbody tr");
+
+  let total = 0;
+  let active = 0;
+  let expiring = 0;
+  let expired = 0;
+
+  rows.forEach(row => {
+    total++;
+
+    const statusCell = row.querySelector(".status");
+    const expiryCell = row.querySelector("[data-expiry]");
+
+    if (statusCell && statusCell.classList.contains("active")) {
+      active++;
+    }
+
+    if (expiryCell) {
+      const expiryDate = new Date(expiryCell.dataset.expiry);
+      const diffDays = Math.ceil(
+        (expiryDate - today) / (1000 * 60 * 60 * 24)
+      );
+
+      if (diffDays < 0) {
+        expired++;
+      } else if (diffDays <= 30) {
+        expiring++;
+      }
+    }
+  });
+
+  document.getElementById("totalVehicles").textContent = total;
+  document.getElementById("activeVehicles").textContent = active;
+  document.getElementById("expiringLicences").textContent = expiring;
+  document.getElementById("expiredLicences").textContent = expired;
+}
+
+document.addEventListener("DOMContentLoaded", calculateVehicleStats);
