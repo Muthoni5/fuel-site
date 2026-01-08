@@ -1,4 +1,4 @@
-cript.js (Column chart)
+
 const ctx = document.getElementById('fuelChart');
 
 new Chart(ctx, {
