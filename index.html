@@ -6,4 +6,56 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+<body>
+
+    <div class="Layout">
+         <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2>FUEL</h2>
+    <ul>
+      <li class="active">Dashboard</li>
+      <li>Transport</li>
+      <li>Vehicle</li>
+      <li>Fuel Management</li>
+    </ul>
+  </aside>
+  <!-- MAIN CONTENT -->
+  <main class="main">
+
+    <h1>Dashboard</h1>
+
+    <!-- KPI CARDS -->
+    <div class="cards">
+      <div class="card">
+        <h3>Technicians</h3>
+        <p class="number">24</p>
+      </div>
+      <div class="card">
+        <h3>Vehicles</h3>
+        <p class="number">38</p>
+      </div>
+      <div class="card">
+        <h3>Fuel / Month (L)</h3>
+        <p class="number">4,820</p>
+      </div>
+      <div class="card">
+        <h3>Distance / Month (KM)</h3>
+        <p class="number">12,450</p>
+      </div>
+    </div>
+    
+    <!-- CHART -->
+    <div class="chart-box">
+      <h2>Weekly Fuel & Distance</h2>
+      <canvas id="fuelChart"></canvas>
+    </div>
+
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
    
