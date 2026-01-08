@@ -80,3 +80,55 @@ body {
   padding: 20px;
   border-radius: 10px;
 }
+.vehicle-section {
+  margin-top: 50px;
+}
+
+.vehicle-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #111;
+}
+
+.vehicle-table th,
+.vehicle-table td {
+  padding: 12px;
+  border-bottom: 1px solid #222;
+  text-align: left;
+}
+
+.vehicle-table th {
+  color: #ff9800;
+  font-weight: bold;
+}
+
+.vehicle-table tr:hover {
+  background: #1a1a1a;
+}
+
+/* STATUS */
+.status.active {
+  color: #00e676;
+  font-weight: bold;
+}
+
+.status.inactive {
+  color: #f44336;
+  font-weight: bold;
+}
+
+/* EXPIRY */
+.expiry.safe {
+  color: #00e676;
+}
+
+.expiry.warning {
+  color: #ff9800;
+  font-weight: bold;
+}
+
+.expiry.danger {
+  color: #f44336;
+  font-weight: bold;
+}
