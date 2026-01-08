@@ -76,3 +76,23 @@ function calculateVehicleStats() {
 }
 
 document.addEventListener("DOMContentLoaded", calculateVehicleStats);
+
+const menuItems = document.querySelectorAll(".menu-item");
+const pages = document.querySelectorAll(".page");
+
+menuItems.forEach(item => {
+  item.addEventListener("click", () => {
+    
+    // remove active from menu
+    menuItems.forEach(i => i.classList.remove("active"));
+    item.classList.add("active");
+
+    // hide all pages
+    pages.forEach(page => page.classList.remove("active"));
+
+    // show selected page
+    const pageId = item.dataset.page;
+    document.getElementById(pageId).classList.add("active");
+  });
+});
+

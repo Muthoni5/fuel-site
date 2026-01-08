@@ -164,3 +164,10 @@ body {
 .summary-card.danger h3 {
   color: #f44336;
 }
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}

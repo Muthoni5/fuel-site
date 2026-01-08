@@ -22,6 +22,43 @@
   <!-- MAIN CONTENT -->
   <main class="main">
 
+  <!-- DASHBOARD -->
+  <section class="page active" id="dashboard">
+    <h1>Dashboard</h1>
+
+    <!-- KPI CARDS -->
+    <div class="cards">
+      <!-- existing KPI cards here -->
+    </div>
+
+    <div class="chart-box">
+      <h2>Weekly Fuel & Distance</h2>
+      <canvas id="fuelChart"></canvas>
+    </div>
+  </section>
+
+  <!-- VEHICLES -->
+  <section class="page" id="vehicles">
+    <h1>Vehicle Management</h1>
+
+    <!-- vehicle summary cards -->
+    <!-- vehicle table -->
+  </section>
+
+  <!-- TRANSPORT -->
+  <section class="page" id="transport">
+    <h1>Transport</h1>
+    <p>List of all vehicles with serial number, make, model, and type.</p>
+  </section>
+
+  <!-- FUEL MANAGEMENT -->
+  <section class="page" id="fuel">
+    <h1>Fuel Management</h1>
+    <p>Fuel refills, filters, approvals, and status.</p>
+  </section>
+
+</main>
+
     <h1>Dashboard</h1>
 
     <!-- KPI CARDS -->
@@ -51,6 +88,7 @@
     </div>
 
     <!-- VEHICLE LIST -->
+
 <section class="vehicle-section">
   <h2>Vehicle List</h2>
 
@@ -128,6 +166,17 @@
   </main>
 
 </div>
+
+<aside class="sidebar">
+  <h2>FUEL</h2>
+  <ul>
+    <li class="menu-item active" data-page="dashboard">Dashboard</li>
+    <li class="menu-item" data-page="transport">Transport</li>
+    <li class="menu-item" data-page="vehicles">Vehicle</li>
+    <li class="menu-item" data-page="fuel">Fuel Management</li>
+  </ul>
+</aside>
+
 
 <script src="main.js"></script>
 </body>
