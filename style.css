@@ -132,3 +132,35 @@ body {
   color: #f44336;
   font-weight: bold;
 }
+.vehicle-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.summary-card {
+  background: #111;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.summary-card p {
+  color: #aaa;
+  font-style: italic;
+}
+
+.summary-card h3 {
+  font-size: 26px;
+  margin-top: 5px;
+  color: #00e676;
+}
+
+.summary-card.warning h3 {
+  color: #ff9800;
+}
+
+.summary-card.danger h3 {
+  color: #f44336;
+}
